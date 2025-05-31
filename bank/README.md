@@ -222,3 +222,10 @@ Once you complete the basic implementation:
 **Ready to start coding?** Begin with the `Transaction` class and build your way up! 🚀
 
 Remember: Focus on writing clean, well-encapsulated code that properly validates inputs, maintains data integrity, and implements real-world business rules. This exercise simulates actual banking software requirements!
+
+
+
+## USER NOTES:
+
+1. **Bank exercise**:
+   - should create a better Transaction flow instead of using Account class to handle transaction processing.
