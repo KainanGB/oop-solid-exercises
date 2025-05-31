@@ -229,3 +229,4 @@ Remember: Focus on writing clean, well-encapsulated code that properly validates
 
 1. **Bank exercise**:
    - should create a better Transaction flow instead of using Account class to handle transaction processing.
+   - find a better way of handling validation because we got alot of duplicated validations.
