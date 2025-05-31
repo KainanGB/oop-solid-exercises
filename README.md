@@ -1,57 +1,148 @@
-# OOP Design Exercises
+# Object-Oriented Programming Design Exercises
 
-Welcome to **OOP Design Exercises**! This repository was created to address the lack of practical exercises focused on object-oriented programming (OOP) design. Whether you’re preparing for technical interviews or simply looking to sharpen your OOP skills, this repository offers a collection of exercises that will help you apply SOLID principles and coding best practices in real-world scenarios.
+## 🎯 Overview
 
-## How to Use This Repository
+This repository contains hands-on Object-Oriented Programming exercises designed to help you practice core OOP concepts through real-world scenarios. Each exercise focuses on different aspects of OOP design and implementation.
 
-This repository is organized into folders, with each folder containing a separate exercise. Inside each folder, you'll find:
+## 📚 Available Exercises
 
-- A description of the exercise and its requirements
-- The conditions and constraints to consider
-- A reference Python solution with comprehensive unit tests
-- A PlantUML file that illustrates the design of the solution
+### 1. College Enrollment Management System (`/college`)
+**Difficulty: Intermediate**  
+**Focus: Object Relationships & Collection Management**
 
-Feel free to browse through the exercises, work on them at your own pace, and compare your solutions with the provided ones. Keep in mind that the solutions are not absolute! You may find some improvements points. 
+Practice implementing a many-to-many relationship system with:
+- Student and Course entities
+- Enrollment junction objects
+- Grade management
+- Comprehensive data validation
 
-## Prerequisites
+**Key OOP Concepts:**
+- Encapsulation and data validation
+- Many-to-many relationships
+- Defensive programming
+- Collection management (Maps, Sets, Lists)
 
-Before diving into these exercises, it’s recommended that you have a solid understanding of:
+**What You'll Build:**
+- `Student.java` - Student entity with ID and name
+- `Course.java` - Course entity with ID and title
+- `Enrollment.java` - Junction object linking students and courses
+- `College.java` - Main management system
 
-- Object-Oriented Programming (OOP) theory
-- SOLID principles
-- Unit testing
+### 2. Bank Account Management System (`/bank`)
+**Difficulty: Advanced**  
+**Focus: Immutable Objects & Business Logic**
 
-These concepts will be crucial as you work through the exercises and aim to develop clean, maintainable, and scalable solutions.
+Build a complete banking system with:
+- Immutable transaction objects
+- Account management with balance validation
+- Atomic transfer operations
+- Transaction history and reporting
 
-## Why Python?
+**Key OOP Concepts:**
+- Immutable value objects
+- Encapsulation with business rules
+- Atomic operations
+- Exception handling
+- Defensive programming
 
-Even though I usually work with Java, I strongly suggest using Python for these exercises, especially if you are preparing for interviews. Python is easy to use and read, which makes it a great choice for writing clear code quickly. Its flexible and simple syntax lets you focus more on solving the problem and designing your solution instead of worrying about complex code details.
+**What You'll Build:**
+- `Transaction.java` - Immutable transaction records
+- `Account.java` - Bank account entity with balance management
+- `Bank.java` - Main banking service orchestrator
 
-Also, Python’s readability helps interviewers understand your thought process during interviews, which allows you to better show your knowledge of OOP principles.
+## 🚀 Getting Started
 
-## File Structure
+1. **Choose an Exercise**: Start with the one that interests you most
+2. **Read the README**: Each project has detailed implementation guidelines
+3. **Study the Tests**: Understand requirements through comprehensive test suites
+4. **Implement Step by Step**: Follow the suggested implementation order
+5. **Test Frequently**: Run `mvn test` to validate your progress
 
-Considering an 'Example Exercise,' its folder follows the file structure shown below. 
+## 🧪 Running Tests
+
+Each project includes comprehensive test suites:
+
+```bash
+# College project
+cd college
+mvn test
+
+# Bank project  
+cd bank
+mvn test
+```
+
+## 📋 Prerequisites
+
+- Java 8 or higher
+- Maven 3.6 or higher
+- Basic understanding of OOP concepts
+- Familiarity with Java collections
+
+## 🎓 Learning Path Recommendation
+
+**For Beginners:**
+1. Start with College project (simpler relationships)
+2. Then tackle Bank project (more complex business logic)
+
+**For Intermediate Developers:**
+1. Try Bank project first (immutability and business rules)
+2. Then College project (focus on relationship management)
+
+## 💡 Key Learning Outcomes
+
+After completing these exercises, you will have practiced:
+
+- **Encapsulation**: Proper use of private fields and public methods
+- **Object Relationships**: One-to-many and many-to-many relationships
+- **Immutability**: Creating objects that cannot be modified after creation
+- **Data Validation**: Robust input validation and error handling
+- **Defensive Programming**: Protecting internal state and returning safe copies
+- **Exception Handling**: Using appropriate exception types
+- **Collection Management**: Working effectively with Java collections
+- **Business Logic**: Implementing real-world rules and constraints
+- **Test-Driven Development**: Understanding requirements through tests
+
+## 🔧 Project Structure
+
+Each exercise follows Maven standard directory layout:
 
 ```
-oop-design-exercises
-└── example
-    ├── example.puml
-    ├── example.py
-    ├── README.md
-    └── test_example.py
-```
-- **example.puml**: PlantUML diagram representing the class relationships and design of the solution
-- **example.py**: Python script containing the object-oriented solution for the exercise
-- **README.md**: Provides details about the specific example exercise, including the problem statement and explanation
-- **test_example.py**: Unit test script to validate the correctness of the solution in `example.py`
-
-## Running Locally
-
-Make sure you have Python3 installed on your machine. You can run the tests by navigating to each folder and executing the following command for the exercise `test_*.py` file.
-
-```commandline
-python3 test_example.py
+project-name/
+├── pom.xml                    # Maven configuration
+├── README.md                  # Detailed implementation guide
+├── src/
+│   ├── main/java/            # Your implementation goes here (currently empty)
+│   └── test/java/            # Comprehensive test suites (provided)
+└── *.puml                    # UML diagrams for reference
 ```
 
-To visualize the PlantUML diagrams, you can either install an extension in your preferred code editor or use a PlantUML server on your machine, or an existent one (see the "Online Server" section on the [official website](https://plantuml.com/starting)).
+## ⚠️ Important Notes
+
+- **No Implementation Provided**: You need to implement all classes from scratch
+- **Tests Are Your Guide**: Use the test files to understand expected behavior
+- **Focus on OOP Principles**: Write clean, well-encapsulated code
+- **Validate Everything**: Practice defensive programming with input validation
+- **Think About Edge Cases**: Consider null values, empty inputs, and error conditions
+
+## 🚀 Extension Ideas
+
+Once you complete the basic exercises:
+
+- Add new features to existing systems
+- Combine concepts from both projects
+- Implement additional design patterns
+- Add persistence layers
+- Create web interfaces
+- Add concurrent access support
+
+## 📚 Additional Resources
+
+- [Java Documentation](https://docs.oracle.com/javase/tutorial/)
+- [Effective Java by Joshua Bloch](https://www.oreilly.com/library/view/effective-java-3rd/9780134686097/)
+- [Clean Code by Robert Martin](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)
+- [JUnit 5 User Guide](https://junit.org/junit5/docs/current/user-guide/)
+
+---
+
+**Happy Coding!** 🚀 These exercises will give you solid hands-on experience with Object-Oriented Programming principles and best practices. 
